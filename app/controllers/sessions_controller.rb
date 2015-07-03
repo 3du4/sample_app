@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       redirect_to user #Rails automatically converts this to the route for the user’s profile page -> user_url(user)
       #debug user later
     else
-      flash[:danger] = 'Invalid email or password'
+      flash.now[:danger] = 'Invalid email or password'
       render 'new'
     end
 
